@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rich Mhyc | Portfolio</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-content">
+        <div class="logo">Rich<span>.dev</span></div>
+        <div class="links">
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <header id="about">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1>Hi, I'm <span>Rich Villaver</span></h1>
+          <h2>Crafting Digital Experiences</h2>
+          <p>
+            An aspiring web developer focused on building clean, functional, and
+            user-centric websites.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="main.png.png" alt="Profile" id="profile-img" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="education">
+        <div class="section-header">
+          <h2>Education</h2>
+        </div>
+        <div class="card">
+          <div class="edu-item">
+            <h3>BS Information Technology</h3>
+            <p class="school-name">USTP CDO</p>
+            <p class="date">2026</p>
+
+            <div style="margin-top: 20px">
+              <h3>Information and Communication Technology</h3>
+              <p class="school-name">LICEO</p>
+              <p class="date">2024</p>
+
+              <div style="margin-top: 20px">
+              <h3>High School</h3>
+              <p class="school-name">MOGCHS</p>
+              <p class="date">2022</p>
+
+              <div style="margin-top: 20px">
+              <h3>Elementary</h3>
+              <p class="school-name">Kauswagan Elementary School</p>
+              <p class="date">2016</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="section-header">
+          <h2>Technical Skills</h2>
+          <button id="toggleSkills" class="btn-secondary">Show/Hide</button>
+        </div>
+        <div class="card" id="skills-container">
+          <ul id="skillList" class="skill-grid">
+            <li><i class="fa-brands fa-html5"></i> HTML5</li>
+            <li><i class="fa-brands fa-css3-alt"></i> CSS3</li>
+            <li><i class="fa-brands fa-js"></i> JavaScript</li>
+            <li><i class="fa-solid fa-database"></i> MySQL</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-header">
+          <h2>Featured Projects</h2>
+        </div>
+        <div class="project-grid" id="projectList">
+          <div class="project-card">
+            <h3>Resume Website</h3>
+            <p>A professional portfolio built with HTML, CSS, and JQuery.</p>
+          </div>
+          <div class="project-card">
+            <h3>Payroll System</h3>
+            <p>A database-driven system for managing employee compensation.</p>
+          </div>
+        </div>
+        <div class="add-project-box">
+          <input
+            type="text"
+            id="newProject"
+            placeholder="New Project Title..."
+          />
+          <button id="addProject" class="btn-main">Add Project</button>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-header">
+          <h2>Get In Touch</h2>
+        </div>
+        <div class="card">
+          <form id="resume-form" onsubmit="return validateForm(event);">
+            <div class="form-group">
+              <input type="text" id="nameInput" placeholder="Full Name" />
+              <input type="email" id="emailInput" placeholder="Email Address" />
+            </div>
+            <textarea
+              id="messageInput"
+              placeholder="How can I help you?"
+            ></textarea>
+            <button type="submit" class="btn-main">Send Message</button>
+          </form>
+          <p id="error" class="error-msg"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="current-year">2026</span> Rich Villaver. Built with
+        passion.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
